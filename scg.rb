@@ -1,8 +1,8 @@
-class Swiftcommitgen < Formula
+class Scg < Formula
   desc "AI-powered Git commit message generator using Apple Intelligence"
   homepage "https://github.com/Iron-Ham/swift-commit-gen"
-  url "https://github.com/Iron-Ham/swift-commit-gen/archive/refs/tags/0.2.0.tar.gz"
-  sha256 "8c827603a2fbb55e743fd2673f91bd7ae168a11363d3cc73b7ea3737264d298e"
+  url "https://github.com/Iron-Ham/swift-commit-gen/archive/refs/tags/0.3.0.tar.gz"
+  sha256 "1ab35f58a51b0138b1146cbd12efeb28abe3b53d0d248ccd1bc11304d9a11275"
   license "MIT"
   head "https://github.com/Iron-Ham/swift-commit-gen.git", branch: "main"
 
@@ -11,12 +11,12 @@ class Swiftcommitgen < Formula
 
   def install
     system "swift", "build", "--disable-sandbox", "-c", "release"
-    bin.install ".build/release/swiftcommitgen"
+    bin.install ".build/release/scg"
   end
 
   def caveats
     <<~EOS
-      SwiftCommitGen requires macOS Tahoe (26.0+) with Apple Intelligence enabled.
+      scg requires macOS Tahoe (26.0+) with Apple Intelligence enabled.
 
       First-Run Setup:
       - Enable Apple Intelligence in System Settings → Apple Intelligence & Siri
@@ -25,7 +25,7 @@ class Swiftcommitgen < Formula
 
       Usage:
         cd your-git-repo
-        swiftcommitgen generate
+        scg generate
 
       Options:
         --staged     Analyze only staged changes
@@ -36,6 +36,6 @@ class Swiftcommitgen < Formula
   end
 
   test do
-    assert_match "USAGE: swiftcommitgen", shell_output("#{bin}/swiftcommitgen --help")
+    assert_match "USAGE: scg", shell_output("#{bin}/scg --help")
   end
 end

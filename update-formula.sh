@@ -13,7 +13,7 @@ fi
 
 VERSION=$1
 REPO="Iron-Ham/swift-commit-gen"
-FORMULA_FILE="swiftcommitgen.rb"
+FORMULA_FILE="scg.rb"
 
 # Construct the URL
 URL="https://github.com/${REPO}/archive/refs/tags/${VERSION}.tar.gz"
@@ -51,6 +51,6 @@ echo ""
 echo "Next steps:"
 echo "1. Review the changes: git diff ${FORMULA_FILE}"
 echo "2. Test the formula: brew install --build-from-source ./${FORMULA_FILE}"
-echo "3. Audit: brew audit --strict --online swiftcommitgen"
-echo "4. Commit: git add ${FORMULA_FILE} && git commit -m 'Update swiftcommitgen to ${VERSION}'"
+echo "3. Audit: brew audit --strict --online scg"
+echo "4. Commit: git add ${FORMULA_FILE} && git commit -m 'Update scg to ${VERSION}'"
 echo "5. Push: git push origin main"
