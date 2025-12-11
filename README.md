@@ -45,9 +45,11 @@ When a new version is released in the main repository:
 
 1. **In the main repo** (`Iron-Ham/swift-commit-gen`):
    ```bash
-   git tag v0.2.0
-   git push origin v0.2.0
+   git tag 0.2.0
+   git push --tags
    ```
+   
+   Update the `SwiftCommitGen.swift` file to match the tag version.
 
 2. **In this tap repo**, update the formula:
    ```bash
