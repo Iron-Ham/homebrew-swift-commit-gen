@@ -1,8 +1,8 @@
 class Scg < Formula
   desc "AI-powered Git commit message generator using Apple Intelligence"
   homepage "https://github.com/Iron-Ham/swift-commit-gen"
-  url "https://github.com/Iron-Ham/swift-commit-gen/archive/refs/tags/0.6.0.tar.gz"
-  sha256 "db21a9e6ef1ba0086ed3db43fa60f4f908a48cfa27ed9b934172a7dadcb981b1"
+  url "https://github.com/Iron-Ham/swift-commit-gen/archive/refs/tags/0.7.0.tar.gz"
+  sha256 "197571d6b3d94e1d1ebd047ed07eb120636ae41e5e25aef04762b72e17444f8b"
   license "MIT"
   head "https://github.com/Iron-Ham/swift-commit-gen.git", branch: "main"
 
